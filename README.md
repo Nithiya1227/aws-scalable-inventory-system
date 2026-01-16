@@ -22,19 +22,58 @@ This project demonstrates a 3-tier cloud architecture designed to handle traffic
 
 ---
 
-## 📸 Project Screenshots
+## 🛠️ Project Evolution & Visual Proof
 
-### 1. Dashboard UI
-![App Dashboard](screenshots/dashboard.png)
-*Inventory Management System Interface accessible via ALB DNS.*
+Here is the step-by-step implementation of the architecture, from a single server to a self-healing automated system.
 
-### 2. Auto-Scaling in Action (3 to 5 Instances)
-![Scaling Proof](screenshots/scaling_instances.png)
-*CloudWatch triggered an alarm during high load, scaling the fleet from 3 to 5 running instances.*
+### **Phase 1: Foundation & Design (Day 1)**
+Building the blueprint and launching the core application.
 
-### 3. Monitoring & Alerts
-![CloudWatch Alarm](screenshots/cloudwatch.png)
-*CloudWatch 'In Alarm' state and SNS Email notifications.*
+| Description | Visual Proof |
+| :--- | :--- |
+| **Full Architecture Diagram** | ![Architecture](screenshots/inventory-architecture.png) |
+| **Initial EC2 Security** | ![EC2 Security](screenshots/ec2_SG.png) |
+| **Python App Running** | ![Python App Running](screenshots/python-app-running.png) |
+| **IP Dashboard** | ![IP Dashboard](screenshots/ip-dashboard.png) |
+
+---
+
+### **Phase 2: Data Logic & Security Hardening (Day 2)**
+Ensuring data persistence and locking down the network.
+
+| Description | Visual Proof |
+| :--- | :--- |
+| **MySQL Backend Table** | ![MySQL Table](screenshots/mysql.png) |
+| **Security Group Hardening** | ![Security Group](screenshots/inventorydb-sg.png) |
+| **DB Compliance & Security** | ![DB Security](screenshots/inventory-db.png) |
+
+---
+
+### **Phase 3: Automation & Scaling (Day 3)**
+The "Climax" - Making the system think and react to traffic.
+
+| Description | Visual Proof |
+| :--- | :--- |
+| **CloudWatch Alarm (Trigger)** | ![CloudWatch](screenshots/cloudwatch_alarm.png) |
+| **Scaling Proof (5 Instances)** | ![Scaling](screenshots/ec2-running.png) |
+| **SNS Real-time Alert** | ![SNS Alert](screenshots/email-alarm.png) |
+| **DNS Dashboard** | ![DNS Dashboard](screenshots/DNS-dashboard.png) |
+
+---
+
+## 🏗️ Technical Implementation Details
+
+### 1. Compute & High Availability
+- **EC2 & ALB:** Deployed the application on Ubuntu instances behind an **Application Load Balancer** to distribute traffic across availability zones.
+- **Auto Scaling Group (ASG):** Configured to maintain system health and handle traffic spikes dynamically.
+
+### 2. Database & Security
+- **Data Layer:** Integrated **MySQL** with **Flask-SQLAlchemy** for persistent record management.
+- **Zero-Trust Security:** Restricted instance access to only the Load Balancer's security group, eliminating direct public exposure.
+
+### 3. Monitoring & Alerting
+- **CloudWatch:** Set up CPU-based alarms to trigger scaling policies.
+- **Amazon SNS:** Automated email notifications for every scaling event, ensuring full visibility.
 
 ---
 
