@@ -31,7 +31,7 @@ Building the blueprint and launching the core application.
 
 | Description | Visual Proof |
 | :--- | :--- |
-| **Full Architecture Diagram** | ![Architecture](screenshots/inventory-architecture.png) |
+| **Full Architecture Diagram** | ![Architecture](screenshots/architecture-inventory.png) |
 | **Initial EC2 Security** | ![EC2 Security](screenshots/ec2_SG.png) |
 | **Python App Running** | ![Python App Running](screenshots/python-app-running.png) |
 | **IP Dashboard** | ![IP Dashboard](screenshots/ip-dashboard.png) |
