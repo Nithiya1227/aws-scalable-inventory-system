@@ -54,7 +54,7 @@ The "Climax" - Making the system think and react to traffic.
 
 | Description | Visual Proof |
 | :--- | :--- |
-| **CloudWatch Alarm (Trigger)** | ![CloudWatch](screenshots/cloudwatch_alarm.png) |
+| **CloudWatch Alarm (Trigger)** | ![CloudWatch](screenshots/cloudwatch-alarm.png) |
 | **Scaling Proof (5 Instances)** | ![Scaling](screenshots/ec2-running.png) |
 | **SNS Real-time Alert** | ![SNS Alert](screenshots/email-alarm.png) |
 | **DNS Dashboard** | ![DNS Dashboard](screenshots/DNS-dashboard.png) |
